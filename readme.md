@@ -36,14 +36,14 @@ This project analyzes café sales transaction data to uncover revenue drivers, c
 
 ## Team
 
-| Name | Student ID | Role |
-|:---|:---|:---|
-| Ananya Narang | 2401020087 | PPT & Quality Lead |
-| Divy Kumar Jain | 2401010157 | Project Lead |
-| Hrishabh Prajapati | 2401020027 | Analysis Lead |
-| Preet Vardhan | 2401010352 | Strategy Lead |
-| Rishik | 2401010381 | Dashboard Lead |
-| Shubham Jain | 2401010452 | Data Lead |
+| Name               | Student ID | Role               |
+| :----------------- | :--------- | :----------------- |
+| Ananya Narang      | 2401020087 | PPT & Quality Lead |
+| Divy Kumar Jain    | 2401010157 | Project Lead       |
+| Hrishabh Prajapati | 2401020027 | Analysis Lead      |
+| Preet Vardhan      | 2401010352 | Strategy Lead      |
+| Rishik             | 2401010381 | Dashboard Lead     |
+| Shubham Jain       | 2401010452 | Data Lead          |
 
 ---
 
@@ -59,6 +59,7 @@ The café lacked clarity on key business questions:
 This absence of analysis limited data-driven decisions across pricing, marketing, and operations.
 
 **Objectives:**
+
 1. Identify top-performing products by revenue and volume
 2. Understand payment and channel usage patterns
 3. Build an interactive dashboard for management decision-making
@@ -76,23 +77,23 @@ This absence of analysis limited data-driven decisions across pricing, marketing
 
 ### Schema
 
-| Column | Description |
-|:---|:---|
-| Transaction ID | Unique identifier per transaction |
-| Month | Month of transaction |
-| Item | Product purchased |
-| Quantity | Units sold |
-| Price Per Unit | Unit selling price |
-| Total Spent | Revenue per transaction |
-| Location | In-store / Takeaway / Unknown |
+| Column         | Description                                   |
+| :------------- | :-------------------------------------------- |
+| Transaction ID | Unique identifier per transaction             |
+| Month          | Month of transaction                          |
+| Item           | Product purchased                             |
+| Quantity       | Units sold                                    |
+| Price Per Unit | Unit selling price                            |
+| Total Spent    | Revenue per transaction                       |
+| Location       | In-store / Takeaway / Unknown                 |
 | Payment Method | Cash / Credit Card / Digital Wallet / Unknown |
 
 ### Data Quality Issues
 
-| Field | Missing / Unknown Rate |
-|:---|:---|
-| Location | 39.78% |
-| Payment Method | 31.12% |
+| Field          | Missing / Unknown Rate |
+| :------------- | :--------------------- |
+| Location       | 39.78%                 |
+| Payment Method | 31.12%                 |
 
 > These gaps are treated as a business insight — poor POS data capture is an operational problem to solve.
 
@@ -102,14 +103,15 @@ This absence of analysis limited data-driven decisions across pricing, marketing
 
 All cleaning and transformation steps were executed in **Google Sheets**.
 
-| Step | Action Taken |
-|:---|:---|
-| Missing values | Blank Location and Payment fields replaced with `"Unknown"` |
-| Sorting | Created `Month Number` field for correct chronological ordering |
+| Step            | Action Taken                                                     |
+| :-------------- | :--------------------------------------------------------------- |
+| Missing values  | Blank Location and Payment fields replaced with `"Unknown"`      |
+| Sorting         | Created `Month Number` field for correct chronological ordering  |
 | Standardization | Location normalized to 3 categories: In-store, Takeaway, Unknown |
-| Outlier check | Scanned for extreme/negative values — no major anomalies found |
+| Outlier check   | Scanned for extreme/negative values — no major anomalies found   |
 
 **Key Assumptions:**
+
 - Unknown values represent missing entries, not a separate customer segment
 - Item prices remained constant throughout the 12-month period
 
@@ -117,13 +119,13 @@ All cleaning and transformation steps were executed in **Google Sheets**.
 
 ## KPI Framework
 
-| KPI | Formula | Why It Matters |
-|:---|:---|:---|
-| Total Revenue | `SUM(Total Spent)` | Overall business performance |
-| Total Transactions | `COUNT(Transaction ID)` | Demand volume indicator |
-| Avg Order Value (AOV) | `AVG(Total Spent)` ≈ $8.94 | Customer spending behaviour |
-| Total Quantity Sold | `SUM(Quantity)` | Menu and inventory optimization |
-| Avg Items Per Transaction | `AVG(Quantity / Transactions)` | Real demand depth per visit |
+| KPI                       | Formula                        | Why It Matters                  |
+| :------------------------ | :----------------------------- | :------------------------------ |
+| Total Revenue             | `SUM(Total Spent)`             | Overall business performance    |
+| Total Transactions        | `COUNT(Transaction ID)`        | Demand volume indicator         |
+| Avg Order Value (AOV)     | `AVG(Total Spent)` ≈ $8.94     | Customer spending behaviour     |
+| Total Quantity Sold       | `SUM(Quantity)`                | Menu and inventory optimization |
+| Avg Items Per Transaction | `AVG(Quantity / Transactions)` | Real demand depth per visit     |
 
 ---
 
@@ -142,12 +144,12 @@ All cleaning and transformation steps were executed in **Google Sheets**.
 
 ## Recommendations
 
-| Insight | Recommendation | Estimated Impact |
-|:---|:---|:---|
-| Salad leads revenue | Promote premium and healthy combo offerings | +8–12% revenue uplift |
-| In-store spend is higher | Improve seating, ambience, and dine-in experience | +3–5% increase in AOV |
-| High missing data | Fix POS tracking and enforce mandatory data fields | +25–30% decision accuracy |
-| Peak months identified | Run targeted campaigns in June and October | +4–6% sales increase |
+| Insight                  | Recommendation                                     | Estimated Impact          |
+| :----------------------- | :------------------------------------------------- | :------------------------ |
+| Salad leads revenue      | Promote premium and healthy combo offerings        | +8–12% revenue uplift     |
+| In-store spend is higher | Improve seating, ambience, and dine-in experience  | +3–5% increase in AOV     |
+| High missing data        | Fix POS tracking and enforce mandatory data fields | +25–30% decision accuracy |
+| Peak months identified   | Run targeted campaigns in June and October         | +4–6% sales increase      |
 
 ---
 
@@ -159,10 +161,10 @@ Monthly units sold range from 1,852 to 2,072 — a variation of only ~220 units 
 
 **Channel Spending Behaviour**
 
-| Channel | Average Order Value |
-|:---|:---|
-| In-store | $8.94 |
-| Takeaway | $8.88 |
+| Channel  | Average Order Value |
+| :------- | :------------------ |
+| In-store | $8.94               |
+| Takeaway | $8.88               |
 
 Although the difference is marginal, in-store customers present a greater upselling opportunity through staff interaction, combo suggestions, and ambience-driven extended visits.
 
@@ -174,23 +176,24 @@ Built entirely in **Google Sheets** using pivot tables, formulas, and slicers.
 
 **Interactive Filters:** Month | Item | Location | Payment Method
 
-| View | Description |
-|:---|:---|
-| KPI Summary | Total Revenue, Transactions, Quantity Sold, AOV at a glance |
-| Monthly Trend | Revenue performance across all 12 months |
-| Product Analysis | Revenue and volume comparison across 8 item categories |
-| Channel & Payment | Location split and payment method distribution |
+| View              | Description                                                 |
+| :---------------- | :---------------------------------------------------------- |
+| KPI Summary       | Total Revenue, Transactions, Quantity Sold, AOV at a glance |
+| Monthly Trend     | Revenue performance across all 12 months                    |
+| Product Analysis  | Revenue and volume comparison across 8 item categories      |
+| Channel & Payment | Location split and payment method distribution              |
 
 ---
+
 ## 📊 Dashboard
 
 **Payment Method**
 
-![Payment Method](IMG_5450.png)
+![Payment Method](assets/IMG_5450.png)
 
 **Location**
 
-![Location](IMG_5449.png)
+![Location](assets/IMG_5449.png)
 
 ## Limitations
 
@@ -219,6 +222,4 @@ This project demonstrates that simple spreadsheet analytics can generate meaning
 
 ---
 
-*Submitted as part of the DVA Capstone 1 Project | Newton School of Technology*
-
-
+_Submitted as part of the DVA Capstone 1 Project | Newton School of Technology_
