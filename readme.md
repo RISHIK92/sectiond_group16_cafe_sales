@@ -182,6 +182,15 @@ Built entirely in **Google Sheets** using pivot tables, formulas, and slicers.
 | Channel & Payment | Location split and payment method distribution |
 
 ---
+## 📊 Dashboard
+
+**Payment Method**
+
+![Payment Method](IMG_5450.png)
+
+**Location**
+
+![Location](IMG_5449.png)
 
 ## Limitations
 
@@ -211,4 +220,5 @@ This project demonstrates that simple spreadsheet analytics can generate meaning
 ---
 
 *Submitted as part of the DVA Capstone 1 Project | Newton School of Technology*
+
 
