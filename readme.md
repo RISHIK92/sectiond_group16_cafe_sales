@@ -43,7 +43,7 @@ This project analyzes café sales transaction data to uncover revenue drivers, c
 | Hrishabh Prajapati | 2401020027 | Analysis Lead |
 | Preet Vardhan | 2401010352 | Strategy Lead |
 | Rishik | 2401010381 | Dashboard Lead |
-| Shubham Jain | 24010 | Data Lead |
+| Shubham Jain | 2401010452 | Data Lead |
 
 ---
 
@@ -211,3 +211,4 @@ This project demonstrates that simple spreadsheet analytics can generate meaning
 ---
 
 *Submitted as part of the DVA Capstone 1 Project | Newton School of Technology*
+
