@@ -8,7 +8,24 @@ Project Overview
 This project analyzes café sales transaction data to uncover revenue drivers, customer behaviour patterns, and operational improvement opportunities. The analysis was conducted using Google Sheets (pivot tables, formulas, and interactive filters) as the primary tool.
 
 Team — Group 16
-NameStudent IDRoleAnanya Narang2401020087PPT & Quality LeadDivy Kumar Jain2401010157Project LeadHrishabh Prajapati2401020027Analysis LeadPreet Vardhan2401010352Strategy LeadRishik2401010381Dashboard LeadShubham Jain24010Data Lead
+Ananya Narang
+2401020087
+PPT & Quality Lead
+Divy Kumar Jain
+2401010157
+Project Lead
+Hrishabh Prajapati
+2401020027
+Analysis Lead
+Preet Vardhan
+2401010352
+Strategy Lead
+Rishik
+2401010381
+Dashboard Lead
+Shubham Jain
+2401010452
+Data Lead
 
 Problem Statement
 The café lacked clarity on:
@@ -103,3 +120,4 @@ Conclusion
 This project demonstrates how simple spreadsheet analytics using Google Sheets can reveal meaningful business insights from transactional data, support data-driven decision-making across products, channels, and payments, and identify opportunities to improve revenue and operational efficiency.
 
 Submitted as part of the DVA Capstone 1 Project | Newton School of Technology
+
